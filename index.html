@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function clr() {
+            document.getElementById('data').value = '';
+            
+        }
+        function disp(digit){
+            document.getElementById('data').value += digit;
+        }
+        function ans(){
+            let x;
+            let y;
+            x = document.getElementById('data').value;
+            y = eval(x);
+            document.getElementById('data').value = y;
+        }
+
+    </script>
+</head>
+<body class="bg-gray-400 flex justify-center items-center h-screen">
+         
+    <div class="bg-white p-6 rounded-lg shadow-md grid grid-cols-4  gap-2">
+        <input id="data" class="bg-green-100 col-span-3 p-2">     
+        <button class="bg-green-100 p-2" onclick="clr()">Clear</button>           
+        <button class="bg-green-100 p-2" onclick="disp('1')">1</button>     
+        <button class="bg-green-100 p-2" onclick="disp('2')">2</button>
+
+        <button class="bg-green-100 p-2" onclick="disp('3')">3</button>
+        <button class="'bg-green-100 p-2" onclick="disp('/')">/</button>
+
+        <button class="bg-green-100 p-2" onclick="disp('4')">4</button>
+        <button class="bg-green-100 p-2" onclick="disp('5')">5</button>
+        <button class="bg-green-100 p-2" onclick="disp('6')">6</button>
+        <button class="bg-green-100 p-2" onclick="disp('*')">*</button>
+        
+        <button class="bg-green-100 p-2" onclick="disp('7')">7</button>
+        <button class="bg-green-100 p-2" onclick="disp('8')">8</button>
+        <button class="bg-green-100 p-2" onclick="disp('9')">9</button>
+        <button class="bg-green-100 p-2" onclick="disp('-')">-</button>
+        
+
+        <button class="bg-green-100 p-2" onclick="disp('0')">0</button>
+        <button class="bg-green-100 p-2" onclick="disp('.')">.</button>
+        <button class="bg-green-100 p-2" onclick="ans()">=</button>
+        <button class="bg-green-100 p-2" onclick="disp('+')">+</button>
+        
+        
+
+         
+
+    </div>
+
+
+
+
+    
+</body>
+
+</html>
